@@ -1,0 +1,377 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,body
+{
+    height: 100%;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    background:#30303D;
+    display: grid;
+    font-family: 'Inconsolata', monospace, sans-serif;
+    grid-gap: 20px;
+    grid-template-columns: 140px auto auto auto;
+}
+
+nav {
+    background: #434356;
+    height: 100vh;
+    line-height: 1;
+    padding: 0 8px; 
+}
+
+main {
+    color: #f8f9fa;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "r-s j-h g-h"
+                         "r-s c-l g-h"
+                         "r-s c-l a-s";
+    padding-top: 40px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    font-size: 12px;
+    line-height: 24px;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+h4 {
+    color: #66d9ef;
+    font-size: 1.08rem;
+    font-weight: 500;
+    padding: 0 0 0 15px;
+    text-transform: uppercase;
+}
+
+/* header */
+/* nav-top */
+.nav-top {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    height: 50%;
+    justify-content: space-evenly;
+}
+
+.nav-top i {
+    border-radius: 20%;
+    height: 20px;
+    padding: 3px;
+    width: 20px;
+}
+
+#set i{
+    background-color: #8be9fd;
+}
+
+#gis i{
+    background-color: #50fa7b;
+}
+
+#sta i{
+    background-color: #ffb86c;
+}
+
+#tre i{
+    background-color: #ff79c6;
+}
+
+#scr i{
+    background-color: #bd93f9;
+}
+
+#pla i{
+    background-color: #f8f8f2;
+}
+
+#hel i{
+    background-color: #f1fa8c;
+}
+
+#set span {
+    color: #8be9fd;
+}
+
+#gis span {
+    color: #50fa7b;
+}
+
+#sta span {
+    color: #ffb86c;
+}
+
+#tre span {
+    color: #ff79c6;
+}
+
+#scr span {
+    color: #bd93f9;
+}
+
+#pla span {
+    color: #f8f8f2;
+}
+
+#hel span {
+    color: #f1fa8c;
+}
+
+/* nav-bottom */
+.nav-bottom {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    justify-content: flex-end;
+    padding: 0 0 10px 0;
+}
+
+.logo-div {
+    padding: 0 0 15px 10px;
+    
+}
+
+.logo-div img {
+    width: 100px;
+}
+
+.blur {
+    color: #434356;
+    filter: opacity(40%);
+}
+
+.blur:hover {
+    filter:contrast(200%);
+}
+
+/* nav-social */
+.nav-social img {
+    height: 25px;
+    width: 25px;
+}
+
+/* main */
+/* reddit-section */
+.reddit-section {
+    grid-area: r-s;
+}
+
+.title {
+    padding: 0 0 30px 0;
+}
+
+#red-first, #red-second, #red-third, #red-fourth {
+    margin: 0.8rem 0.5rem;
+    padding-left: 8px;
+}
+
+.reddit-desc {
+    letter-spacing: -1px;
+    line-height: 1.1;
+    border-left: 3px solid #44475a;
+}
+
+.reddit-desc p {
+    padding: 0 0 5px 0;
+}
+
+.reddit-desc:hover {
+    border-color: #50fa7b;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.yellow-text {
+    color: #f1fa8c;
+}
+
+.blue-text {
+    color: #8be9fd;
+}
+
+.purple-text {
+    color: #6272a4;
+}
+
+.pink-text-no-link {
+    color: #ff79c6;
+}
+
+.pink-text {
+    color: #ff79c6;
+    text-decoration: underline;
+}
+
+
+/* javascript-history */
+.javascript-history {
+    grid-area: j-h;
+}
+
+.javascript-history h4 {
+    padding-left: 100px;
+}
+
+.relevant-desc {
+    padding-top: 15px;
+}
+
+.underline {
+    border-bottom: 2px solid #44475a;
+    margin-right: 30px;
+}
+
+.desc {
+    display: grid;
+    font-size: 0.9rem;
+    font-weight: 500;
+    grid-gap: 10px;
+    grid-template-columns: 5fr 1fr;
+    grid-template-areas: "dd da";
+    letter-spacing: -0.7px;
+    padding-bottom: 10px;
+    word-spacing: -2px;
+}
+
+.desc a:hover {
+    color: #f1fa8c;
+}
+
+.days-desc a, .clock-live {
+    color: #6272a4;
+}
+
+.desc i {
+    background-color: rgba(248,248,242, 0.1);
+    border: 2px solid #6272a4;
+    border-radius: 20%;
+    color: lightblue;
+    height: 22px;
+    padding: 2px 2px;
+    width: 22px;
+}
+
+.days {
+    color: #858794;
+}
+
+.orange-text, .clock-live i {
+    color: #ffb86c;
+}
+
+/* liveClock */
+#liveClock {
+    align-items: center;
+    color: #5b738b;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    justify-content: center;
+}
+
+.clock-live {
+    grid-area: c-l;
+}
+
+.clock-time {
+    align-items: flex-start;
+    display: flex;
+}
+
+#hour {
+    font-size: 7rem;
+    letter-spacing: -8px;
+}
+
+#am-pm {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-left: 5px;
+    transform: translateY(200%); 
+}
+
+#day {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: -2px;
+    padding: 0 0 10px 0;
+    transform: translateY(-40%);
+    word-spacing: -2px;
+}
+
+.clock-text p {
+    font-size: 0.8rem;
+    letter-spacing: -1px;
+    line-height: 1px;
+    padding-bottom: 12px;
+    text-align: center;
+    word-spacing: -2px;
+}
+
+/* github-history */
+.github-history {
+    grid-area: g-h;
+    max-width: 300px;
+}
+
+#small-switch {
+    font-size: 0.8rem;
+    padding: 0 0 0 60px;
+}
+
+.github-menu {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: -0.7px;
+    line-height: 1;
+    padding: 25px 0 20px 40px;
+    text-transform: uppercase;
+}
+
+.github-issue  {
+    color: #f1fa8c;
+}
+
+#github-arrow {
+    padding: 0 0 0 20px;
+}
+
+.github-pull  {
+    color: #ff79c6;
+    padding: 0 0 0 10px;
+}
+
+.issue {
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    padding: 0 0 0 8px;
+    border-left: 3px solid #44475a;
+    
+}
+
+.issue:hover {
+    border-color: #50fa7b;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.issue p {
+    padding: 0 0 1px 0;
+}
+
+.adv-section {
+    grid-area: a-s;
+}
